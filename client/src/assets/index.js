@@ -1,9 +1,9 @@
 import download from './download.png';
-import logo from './logo.svg';
 import preview from './preview.png';
+import Modern_Pixel_Logo from './Modern_Pixel_Logo.png'
 
 export {
   download,
-  logo,
   preview,
+  Modern_Pixel_Logo
 };
