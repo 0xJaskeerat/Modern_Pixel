@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { Card , FormField, Loader } from '../components';
 import { Form } from 'react-router-dom';
+import PageDescription from '../components/PageDescription'
 
 const RenderCards = ({data, title}) => {
   if(data?.length > 0){
@@ -19,10 +20,10 @@ const Home = () => {
 
   return (
     <section className='max-w-7xl mx-auto'>
-      <div>
-        <h1 className='font-extrabold text-[#222328] text-[32px]'>Pixels SHOWcase</h1>
-        <p className='mt-2 text-[@666e75] text-[14px] text-[#CC0909] max-w-[500px] font-semibold'>Scroll through to experience the finest creations by DALL-E</p>
-      </div>
+      <PageDescription 
+        heading={"Pixels SHOWcase"}
+        description={"Scroll through to experience the finest creations by DALL-E"}
+      />
 
       <div className="mt-16">
         <FormField />
