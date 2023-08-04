@@ -11,19 +11,22 @@ const PORT = process.env.PORT || 5000;
 
 const app = express();
 
-app.use(function (req, res, next) {
-  const allowedOrigins = ['https://modern-pixel-frontend.vercel.app/', 'https://modern-pixel.onrender.com/'];
-  const origin = req.headers.origin;
-  if (allowedOrigins.includes(origin)) {
-    res.setHeader('Access-Control-Allow-Origin', origin);
-  }
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-  res.header("Access-Control-Allow-credentials", true);
-  res.header("Access-Control-Allow-Methods", "GET, POST");
-  next();
-});
+// middlewares
+const allowedOrigins = ['http://localhost:5173', 'http://localhost:8000'];
 
-app.use(express.json({ limit: '50mb' }))
+app.use(
+    cors({
+      origin:  function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+          callback(null, true);
+        } else {
+          callback(new Error('Not allowed by CORS'));
+        }
+      },
+      methods: ["GET", "POST"],
+    })
+  );
+app.use(express.json({ limit: '50mb'}))
 
 //routes
 app.use('/api/v1/post', postRoutes);
