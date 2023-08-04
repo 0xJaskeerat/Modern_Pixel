@@ -10,7 +10,7 @@ const CreatePost = () => {
   const [form, setForm] = useState({
     name: "",
     prompt: "",
-    generatedImg: ""
+    photo: ""
   })
   const [isGeneratingImg, setIsGeneratingImg] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -35,7 +35,6 @@ const CreatePost = () => {
           headers: {
             'Content-Type': 'application/json',
           },
-          withCredentials: true,
           body: JSON.stringify({
             prompt: form.prompt,
           }),
@@ -64,12 +63,10 @@ const CreatePost = () => {
           headers: {
             'Content-Type': 'application/json',
           },
-          withCredentials: true, 
           body: JSON.stringify({ ...form }),
         });
 
         await response.json();
-        alert('Success');
         navigate('/');
       } catch (err) {
         alert(err);
@@ -111,9 +108,9 @@ const CreatePost = () => {
           />
 
           <div className="relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center">
-            {form.generatedImg ? (
+            {form.photo ? (
               <img
-                src={form.generatedImg}
+                src={form.photo}
                 alt={form.prompt}
                 className="w-full h-full object-contain"
               />
@@ -144,7 +141,6 @@ const CreatePost = () => {
         </div>
 
         <div className="mt-10">
-          <p className="mt-2 text-[#666e75] text-[14px]">** Once you have created the image you want, you can share it with others in the community **</p>
           <button
             type="submit"
             className="mt-3 text-white bg-[#CC0909] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"

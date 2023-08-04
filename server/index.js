@@ -24,8 +24,6 @@ app.use(
         }
       },
       methods: ["GET", "POST"],
-      credentials: true,
-      exposedHeaders: ['Authorization']
     })
   );
 app.use(express.json({ limit: '50mb'}))

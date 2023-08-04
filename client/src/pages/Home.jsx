@@ -24,12 +24,11 @@ const Home = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('http://locahost:8000/api/v1/post', {
+      const response = await fetch('http://localhost:8000/api/v1/post', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
         },
-        withCredentials: true 
       });
 
       if (response.ok) {
@@ -49,7 +48,7 @@ const Home = () => {
 
     setSearchTimeout(
       setTimeout(() => {
-        const searchResult = allPosts.filter((item) => item.name.toLowerCase().includes(searchText.toLowerCase()) || item.prompt.toLowerCase().includes(searchText.toLowerCase()));
+        const searchResult = posts.filter((item) => item.name.toLowerCase().includes(searchText.toLowerCase()) || item.prompt.toLowerCase().includes(searchText.toLowerCase()));
         setSearchedResults(searchResult);
       }, 500),
     );
