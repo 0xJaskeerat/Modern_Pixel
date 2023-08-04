@@ -48,10 +48,11 @@ const Home = () => {
 
     setSearchTimeout(
       setTimeout(() => {
-        const searchResult = posts.filter((item) => item.name.toLowerCase().includes(searchText.toLowerCase()) || item.prompt.toLowerCase().includes(searchText.toLowerCase()));
+        const searchResult = posts.filter((item) => item.name.toLowerCase().includes(e.target.value.toLowerCase()) || item.prompt.toLowerCase().includes(e.target.value.toLowerCase()));
         setSearchedResults(searchResult);
       }, 500),
     );
+    
   };
 
   useEffect(() => {
