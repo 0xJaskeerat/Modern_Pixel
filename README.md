@@ -22,18 +22,18 @@ Our state-of-the-art image hosting relies on the robust Cloudinary Service, guar
       <img src="https://vitejs.dev/logo.svg" alt="Vite.js" height="40" style="vertical-align:top; margin:4px" />
     </a>
     <a href="https://react.dev/" target="_blank">
-      <img src="https://create-react-app.dev/img/logo.svg" alt="React.js" height="40" style="vertical-align:top; margin:4px" />
+      <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" alt="React.js" height="40" style="vertical-align:top; margin:4px" />
     </a>
     <a href="https://nodejs.org" target="_blank">
       <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png" 
           alt="Node.js" height="40" style="vertical-align:top; margin:4px" />
     </a>
     <a href="https://expressjs.com/" target="_blank">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR49CPLVKPAe1cslXaHnF20_Qwt-MiSoRen-vvYNoCmLkKwCQ1GtWdstwiUeDJ03RYu5ik&usqp=CAU" alt="Express.js" height="40" style="vertical- 
+      <img src="https://avatars.githubusercontent.com/u/5658226?s=200&v=4" alt="Express.js" height="40" style="vertical- 
           align:top; margin:4px" />
     </a>
     <a href="https://www.mongodb.com/" target="_blank">
-      <img src="https://w7.pngwing.com/pngs/956/695/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail.png" 
+      <img src="https://avatars.githubusercontent.com/u/45120?s=200&v=4" 
           alt="MongoDB" height="40" style="vertical- 
           align:top; margin:4px" />
     </a>
