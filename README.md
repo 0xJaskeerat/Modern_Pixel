@@ -57,12 +57,26 @@ Our state-of-the-art image hosting relies on the robust Cloudinary Service, guar
 <br>
 
 - Clone / Download :
+```
+git clone https://github.com/your_username_/Project-Name.git
+```
 
-       git clone https://github.com/your_username_/Project-Name.git
+- Open the project in your favorite code editor and in both the client and server directory, do this :
 
-- Open the project in your favorite code editor and do following
+```
+npm install
+```
+  
+- In the server directory, create a new <code>.env</code> file and add following environment variables :
 
-       npm install
+```
+MONGODB_URL: your_mongodb_connection_string
+PORT: Port of your choice ( eg: 8000 )
+OPENAI_API_KEY = your_open_ai_api_key
+CLOUDINARY_CLOUD_NAME = your_cloudinary_cloud_name
+CLOUDINARY_API_KEY = your_cloudinary_api_key
+CLOUDINARY_API_SECRET = your_cloudinary_api_secret
+```
 
 ## ✍ Contributing :
 
